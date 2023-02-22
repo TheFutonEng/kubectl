@@ -12,3 +12,6 @@ COPY --from=kubectl /opt/bitnami/kubectl/bin/kubectl /usr/local/bin/
 # jq - needed to parse vault initialization output
 # curl - needed to upload CA PEM bundle to vault
 RUN apk update && apk add jq curl
+
+# Note the lack of a `CMD` or `ENTRYPOINT` directive.  The command for the container
+# to run is expected to be supplied at runtime.
