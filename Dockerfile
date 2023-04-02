@@ -1,3 +1,6 @@
+# This container is being used in a K8s job to bootstrap Hashicorp Vault according to the below doc:
+# https://developer.hashicorp.com/vault/tutorials/kubernetes/kubernetes-cert-manager
+
 FROM bitnami/kubectl:1.24.8 as kubectl
 FROM alpine
 
