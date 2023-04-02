@@ -5,7 +5,6 @@ FROM alpine
 # image version as what is running in the Ubuntu cluster in WSP.
 COPY --from=kubectl /opt/bitnami/kubectl/bin/kubectl /usr/local/bin/
 
-# RUN adduser -D rmengert
-# USER rmengert
-
 RUN apk update && apk add jq curl
+
+CMD /bin/sh
